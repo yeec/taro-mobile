@@ -1,0 +1,21 @@
+.example {
+  &-body {
+    height: 300px;
+    &__scroll-view {
+      height: 100%;
+      white-space: nowrap;
+      &-item {
+        width: 100%;
+        display: inline-block;
+        height: 100%;
+      }
+    }
+    &--vertical {
+      .example-body__scroll-view {
+        &-item {
+          display: block;
+        }
+      }
+    }
+  }
+}
