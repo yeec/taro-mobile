@@ -1,66 +1,39 @@
 import Taro, { Component } from '@tarojs/taro'
-import Index from './pages/index'
+import Index from './pages/myIndex/myIndex'
 
 import './app.less'
 
 class App extends Component {
   config = {
     pages: [
-      // 'pages/component/index',
-      // 'pages/component/pages/view/view',
-      // 'pages/component/pages/scroll-view/scroll-view',
-      // 'pages/component/pages/icon/icon',
-      // 'pages/component/pages/progress/progress',
-      // 'pages/component/pages/image/image',
-      // 'pages/component/pages/audio/audio',
-      // 'pages/component/pages/video/video',
-      // 'pages/component/pages/swiper/swiper',
-      // 'pages/component/pages/form/form',
-      // 'pages/component/pages/input/input',
-      // 'pages/component/pages/checkbox/checkbox',
-      // 'pages/component/pages/radio/radio',
-      // 'pages/component/pages/button/button',
-      // 'pages/component/pages/text/text',
-      // 'pages/component/pages/label/label',
-      // 'pages/component/pages/picker/picker',
-      // 'pages/component/pages/slider/slider',
-      // 'pages/component/pages/switch/switch',
-      // 'pages/component/pages/textarea/textarea',
-      // 'pages/component/pages/canvas/canvas',
-      // 'pages/component/pages/map/map',
-      // 'pages/component/pages/navigator/navigator',
-      // 'pages/component/pages/redirectPage/redirectPage',
-      // 'pages/component/pages/navigatePage/navigatePage',
-      // 'pages/about/about',
-      // 'pages/component/pages/camera/camera',
       'pages/myIndex/myIndex'
     ],
     window: {
       backgroundTextStyle: 'light',
-      navigationBarBackgroundColor: '#fff',
+      navigationBarBackgroundColor: '#f9f9f9',
       navigationBarTitleText: 'TODO List',
-      navigationBarTextStyle: 'black'
+      navigationBarTextStyle: 'black',
     },
     tabBar: {
-      backgroundColor: '#fff',
+      backgroundColor: '#f9f9f9',
       color: "#a9b7b7",
       selectedColor: "#11cd6e",
       borderStyle: "white",
       list: [
         {
-          pagePath: 'pages/about/about',
+          pagePath: 'pages/myIndex/myIndex',
           text: '首页',
           iconPath: 'asset/bar/sybar02@2x.png',
           selectedIconPath: 'asset/bar/sybar01@2x.png'
         },
         {
-          pagePath: 'pages/component/pages/view/view',
+          pagePath: 'pages/myIndex/myIndex',
           text: '理财',
           iconPath: 'asset/bar/lcbar02@2x.png',
           selectedIconPath: 'asset/bar/lcbar01@2x.png'
         },
         {
-          pagePath: 'pages/component/pages/redirectPage/redirectPage',
+          pagePath: 'pages/myIndex/myIndex',
           text: '生活',
           iconPath: 'asset/bar/shbar02@2x.png',
           selectedIconPath: 'asset/bar/shbar01@2x.png'

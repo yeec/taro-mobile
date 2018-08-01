@@ -1,0 +1,21 @@
+<block>
+    <view class="account">
+        <view class="account-logo"></view>
+        <view class="account-info">
+            <view class="name">
+                <view class="title">{{customerName}}</view>
+                <view class="type">储蓄卡</view>
+            </view>
+            <view class="cardNu">{{acNo}}</view>
+            <view class="balance">
+                <view class="title">可用余额</view>
+                <view class="num">{{balance}}
+                    <text class="danwei">元</text>
+                </view>
+            </view>
+        </view>
+        <view class="account-jiantou">
+            <view class="jiantou">></view>
+        </view>
+    </view>
+</block>

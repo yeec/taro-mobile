@@ -1,33 +1,27 @@
-import Taro, {
-  Component
-} from '@tarojs/taro'
-import {
-  View,
-  Text,
-  Input,
-  Button,
-  Image
-} from '@tarojs/components'
+import Taro from '@tarojs/taro-h5';
+import { Component } from "@tarojs/taro-h5";
+import Nerv from "nervjs";
+import { View, Text, Input, Button, Image } from '@tarojs/components';
 
-import './myIndex.less'
+import './myIndex.less';
 // const http = require('../../utils/http.js')//引入http.js文件utils/js/http.js')//引入
 
 export default class MyIndex extends Component {
   config = {
-    navigationBarTitleText: '我的',
+    navigationBarTitleText: '我的'
 
-  }
+  };
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      customerName:"",
-      acNo:"",
-      balance:"",
+      customerName: "",
+      acNo: "",
+      balance: ""
 
-    }
+    };
   }
   componentDidMount() {
-    console.log('hello mount')
+    console.log('hello mount');
     var reqHead = {
       //默认固定上送报文
       //！！！！！！！！！本地远程连接前置使用！！！！！！！！！
@@ -45,7 +39,7 @@ export default class MyIndex extends Component {
       userName: "陈平萍",
       certType: "10100",
       certNo: "510704199102183528",
-      mobile: "13795659175",
+      mobile: "13795659175"
     };
     var reqBody = {
       // reuestFlag: "0",
@@ -73,15 +67,15 @@ export default class MyIndex extends Component {
     }).then(res => {
       // Taro.hideLoading()
       this.setState({
-        customerName:res.data.rspBody.customerName,
-        acNo:res.data.rspBody.returnList[0].acNo,
-        balance:res.data.rspBody.returnList[0].balance
+        customerName: res.data.rspBody.customerName,
+        acNo: res.data.rspBody.returnList[0].acNo,
+        balance: res.data.rspBody.returnList[0].balance
       });
       console.log("返回结果=" + JSON.stringify(res.data.rspBody.returnList[0].balance));
     }).catch(function (err) {
       // Taro.hideLoading()
       console.log("返回结果=" + JSON.stringify(err));
-    })
+    });
     // http.post(
     //   "http://111.198.98.66:36962/mbank/account/underbarrelAccountNo",
     //   paramsTemp, 
@@ -95,21 +89,20 @@ export default class MyIndex extends Component {
   }
 
   componentDidShow() {
-    console.log('hello show')
+    console.log('hello show');
   }
 
   componentDidHide() {
-    console.log('hello hide')
+    console.log('hello hide');
   }
 
   componentWillUnmount() {
-    console.log('hello unmount')
+    console.log('hello unmount');
   }
 
   render() {
 
-    return (
-      <View className="account">
+    return <View className="account">
           <View className="account-logo"></View>
           <View className="account-info">
             <View className="name"><View className="title">{this.state.customerName}</View> <View className="type">储蓄卡</View></View>
@@ -117,9 +110,6 @@ export default class MyIndex extends Component {
             <View className="balance"><View className="title">可用余额</View><View className="num">{this.state.balance} <Text className="danwei">元</Text></View></View>
           </View>
           <View className="account-jiantou"><View className="jiantou">></View></View>
-      </View>
-    
-      
-    )
+      </View>;
   }
 }

@@ -1,0 +1,15 @@
+{
+	"miniprogramRoot": "./",
+	"projectname": "taro-mobile-web",
+	"description": "手机银行",
+	"appid": "touristappid",
+	"setting": {
+		"urlCheck": false,
+		"es6": false,
+		"postcss": false,
+		"minified": false,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"condition": {}
+}
