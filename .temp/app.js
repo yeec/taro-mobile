@@ -29,7 +29,7 @@ class App extends Component {
         "iconPath": require("./asset/bar/sybar02@2x.png"),
         "selectedIconPath": require("./asset/bar/sybar01@2x.png")
       }, {
-        pagePath: 'pages/myIndex/myIndex',
+        pagePath: 'pages/jianyijisuanqi/jianyijisuanqi',
         text: '理财',
         "iconPath": require("./asset/bar/lcbar02@2x.png"),
         "selectedIconPath": require("./asset/bar/lcbar01@2x.png")
@@ -52,8 +52,9 @@ class App extends Component {
                     <Tabbar conf={__tabs} homePage="pages/myIndex/myIndex" router={Taro} />
                   </TabbarContainer>;
   }
+
 }
 
 Taro.initNativeApi(Taro);
-TaroRouter.initRouter([['/pages/myIndex/myIndex', () => import('./pages/myIndex/myIndex')]], Taro);
+TaroRouter.initRouter([['/pages/myIndex/myIndex', () => import('./pages/myIndex/myIndex')], ['/pages/jianyijisuanqi/jianyijisuanqi', () => import('./pages/jianyijisuanqi/jianyijisuanqi')], ['/pages/jianyijisuanqilog/jianyijisuanqilog', () => import('./pages/jianyijisuanqilog/jianyijisuanqilog')]], Taro);
 Nerv.render(<App />, document.getElementById('app'));
