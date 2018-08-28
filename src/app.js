@@ -9,7 +9,6 @@ class App extends Component {
   config = {
     pages: [
       'pages/myIndex/myIndex',
-      'pages/jisuanqi/jisuanqi',
       'pages/jianyijisuanqi/jianyijisuanqi',
       'pages/jianyijisuanqilog/jianyijisuanqilog'
       
