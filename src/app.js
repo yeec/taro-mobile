@@ -1,6 +1,7 @@
 import Taro, { Component } from '@tarojs/taro'
 import Index from './pages/myIndex/myIndex'
-import Jisuanqi from './pages/jisuanqi/jisuanqi'
+import Jianyijisuanqi from './pages/jianyijisuanqi/jianyijisuanqi'
+import Jianyijisuanqilog from './pages/jianyijisuanqilog/jianyijisuanqilog'
 
 import './app.less'
 
@@ -8,7 +9,10 @@ class App extends Component {
   config = {
     pages: [
       'pages/myIndex/myIndex',
-      'pages/jisuanqi/jisuanqi'
+      'pages/jisuanqi/jisuanqi',
+      'pages/jianyijisuanqi/jianyijisuanqi',
+      'pages/jianyijisuanqilog/jianyijisuanqilog'
+      
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -29,7 +33,7 @@ class App extends Component {
           selectedIconPath: 'asset/bar/sybar01@2x.png'
         },
         {
-          pagePath: 'pages/jisuanqi/jisuanqi',
+          pagePath: 'pages/jianyijisuanqi/jianyijisuanqi',
           text: '理财',
           iconPath: 'asset/bar/lcbar02@2x.png',
           selectedIconPath: 'asset/bar/lcbar01@2x.png'
@@ -61,7 +65,8 @@ class App extends Component {
   render () {
     return (
       <Index />,
-      <Jisuanqi/>
+      <Jianyijisuanqi/>,
+      <Jianyijisuanqilog/>
     )
   }
   
