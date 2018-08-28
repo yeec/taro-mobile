@@ -1,12 +1,14 @@
 import Taro, { Component } from '@tarojs/taro'
 import Index from './pages/myIndex/myIndex'
+import Jisuanqi from './pages/jisuanqi/jisuanqi'
 
 import './app.less'
 
 class App extends Component {
   config = {
     pages: [
-      'pages/myIndex/myIndex'
+      'pages/myIndex/myIndex',
+      'pages/jisuanqi/jisuanqi'
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -27,7 +29,7 @@ class App extends Component {
           selectedIconPath: 'asset/bar/sybar01@2x.png'
         },
         {
-          pagePath: 'pages/myIndex/myIndex',
+          pagePath: 'pages/jisuanqi/jisuanqi',
           text: '理财',
           iconPath: 'asset/bar/lcbar02@2x.png',
           selectedIconPath: 'asset/bar/lcbar01@2x.png'
@@ -58,9 +60,11 @@ class App extends Component {
 
   render () {
     return (
-      <Index />
+      <Index />,
+      <Jisuanqi/>
     )
   }
+  
 }
 
 Taro.render(<App />, document.getElementById('app'))
