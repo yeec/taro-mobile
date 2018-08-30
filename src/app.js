@@ -12,7 +12,8 @@ class App extends Component {
       'pages/myIndex/myIndex',
       'pages/jianyijisuanqi/jianyijisuanqi',
       'pages/jianyijisuanqilog/jianyijisuanqilog',
-      'pages/component/component'
+      'pages/component/component',
+      'pages/qrCode/qrCodeHome/qrCodeHome'
       
     ],
     window: {
@@ -46,7 +47,7 @@ class App extends Component {
           selectedIconPath: 'asset/bar/shbar01@2x.png'
         },
         {
-          pagePath: 'pages/myIndex/myIndex',
+          pagePath: 'pages/qrCode/qrCodeHome/qrCodeHome',
           text: '我的',
           iconPath: 'asset/bar/wdbar02@2x.png',
           selectedIconPath: 'asset/bar/wdbar01@2x.png'

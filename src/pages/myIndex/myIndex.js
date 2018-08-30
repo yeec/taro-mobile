@@ -105,15 +105,13 @@ export default class MyIndex extends Component {
   componentWillUnmount() {
     console.log('hello unmount')
   }
-  onClick(){
-    console.log("1234444");
-  }
+
   render() {
 
     return (
       <View className="account">
           <View className="account-logo"></View>
-          <View className="account-info" onClick={this.onClick}>
+          <View className="account-info">
             <View className="name"><View className="title">{this.state.customerName}</View> <View className="type">储蓄卡</View></View>
             <View className="cardNu">{this.state.acNo} </View>
             <View className="balance"><View className="title">可用余额</View><View className="num">{this.state.balance} <Text className="danwei">元</Text></View></View>

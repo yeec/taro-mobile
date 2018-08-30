@@ -25,7 +25,6 @@ import Taro, {
     }
     componentDidMount() {
       var logs =Taro.getStorageSync('calclogs');
-      alert(logs);
       this.setState({logs:logs});
     }
     componentDidShow() {
