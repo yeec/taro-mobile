@@ -1,6 +1,9 @@
 import isMobile from "./mobile-check";
 
 const native = function () {
+  if(process.env.H5 == false){
+    return
+  }
   const ua = navigator.userAgent || navigator.vendor || this.opera;
   const os = (function () {
     if (isMobile()) {

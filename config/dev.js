@@ -1,9 +1,11 @@
 module.exports = {
   env: {
-    NODE_ENV: '"development"'
+    NODE_ENV: '"H5"',
+    H5: false,
   },
-  defineConstants: {
-  },
+  defineConstants: {},
   weapp: {},
-  h5: {}
+  h5: {
+    NODE_ENV: '"H5"'
+  }
 }
